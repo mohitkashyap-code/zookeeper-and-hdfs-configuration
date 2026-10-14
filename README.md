@@ -38,9 +38,9 @@ About 6 GB free disk (each container holds its own copy of Hadoop) and ~8 GB RAM
 ## Quick start
 
 ```bash
-git clone https://github.com/<you>/zk-hdfs-nspawn-lab.git
+git clone https://github.com/mohitkashyap-code/zookeeper-and-hdfs-configuration.git
 cd zk-hdfs-nspawn-lab
-sudo ./scripts/run-all.sh        # or run scripts/01..08 one at a time
+sudo ./scripts/run-all.sh
 ```
 
 | Script | What it does |
