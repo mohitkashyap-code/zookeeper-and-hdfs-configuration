@@ -25,7 +25,7 @@ Arch Linux host
 | Host | Arch Linux |
 | Container OS | Debian 12 (bookworm) |
 | Java | OpenJDK 17 |
-| ZooKeeper | 3.8.x (stable branch) — see `lab.env` |
+| ZooKeeper | 3.8.7 (stable branch) |
 | Hadoop | 3.5.0 (first release with full JDK 17 support) |
 
 ## Prerequisites (host)
