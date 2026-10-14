@@ -1,0 +1,14 @@
+[Unit]
+Description=Apache ZooKeeper
+After=network.target
+
+[Service]
+User=zookeeper
+Environment=ZOO_LOG_DIR=/var/log/zookeeper
+ExecStart=/opt/zookeeper/bin/zkServer.sh start-foreground
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

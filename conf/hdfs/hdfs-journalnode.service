@@ -1,0 +1,15 @@
+[Unit]
+Description=HDFS journalnode
+After=network.target zookeeper.service
+StartLimitIntervalSec=0
+
+[Service]
+User=hdfs
+Environment=JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ExecStart=/opt/hadoop/bin/hdfs journalnode
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

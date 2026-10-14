@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<configuration>
+  <property><name>dfs.nameservices</name><value>hacluster</value></property>
+  <property><name>dfs.ha.namenodes.hacluster</name><value>nn1,nn2</value></property>
+  <property><name>dfs.namenode.rpc-address.hacluster.nn1</name><value>zk1:8020</value></property>
+  <property><name>dfs.namenode.rpc-address.hacluster.nn2</name><value>zk2:8020</value></property>
+  <property><name>dfs.namenode.http-address.hacluster.nn1</name><value>zk1:9870</value></property>
+  <property><name>dfs.namenode.http-address.hacluster.nn2</name><value>zk2:9870</value></property>
+  <property><name>dfs.namenode.shared.edits.dir</name><value>qjournal://zk1:8485;zk2:8485;zk3:8485/hacluster</value></property>
+  <property><name>dfs.client.failover.proxy.provider.hacluster</name><value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value></property>
+  <property><name>dfs.ha.automatic-failover.enabled</name><value>true</value></property>
+  <!-- Lab only: JournalNodes already prevent two active writers. Use sshfence in production. -->
+  <property><name>dfs.ha.fencing.methods</name><value>shell(/bin/true)</value></property>
+  <property><name>dfs.namenode.name.dir</name><value>/var/lib/hadoop-hdfs/nn</value></property>
+  <property><name>dfs.datanode.data.dir</name><value>/var/lib/hadoop-hdfs/dn</value></property>
+  <property><name>dfs.journalnode.edits.dir</name><value>/var/lib/hadoop-hdfs/jn</value></property>
+  <property><name>dfs.replication</name><value>3</value></property>
+</configuration>
