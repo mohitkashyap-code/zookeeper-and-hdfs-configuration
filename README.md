@@ -39,7 +39,7 @@ About 6 GB free disk (each container holds its own copy of Hadoop) and ~8 GB RAM
 
 ```bash
 git clone https://github.com/mohitkashyap-code/zookeeper-and-hdfs-configuration.git
-cd zk-hdfs-nspawn-lab
+cd zookeeper-and-hdfs-configuration
 sudo ./scripts/run-all.sh
 ```
 
